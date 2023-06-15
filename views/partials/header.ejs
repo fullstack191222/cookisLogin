@@ -1,0 +1,20 @@
+<header class="flexContainer">
+
+    <nav class="navigation">
+        <a href="/">Home</a>
+    </nav>
+    <div class="errorMessages">
+        <% if (typeof errorMessage !=='undefined' && errorMessage) { %>
+            <p class="error">
+                <%= errorMessage %>
+            </p>
+            <% } %>
+    </div>
+    <div class="flexLogin">
+        <% if (typeof isLoggedIn !=='undefined' && isLoggedIn) { %>
+            <a href="/logout" class="sideLoginLogout">Logout</a>
+            <% } else {%>
+                <a class="sideLoginLogout" href="/login">Login</a>
+                <% } %>
+    </div>
+</header>
